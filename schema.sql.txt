@@ -1,0 +1,57 @@
+-- Create movies table
+CREATE TABLE movies (
+    movie_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    release_date DATE,
+    rating FLOAT
+);
+
+-- Create watchlist table
+CREATE TABLE watchlist (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    show_title VARCHAR(255),
+    status VARCHAR(50),
+    movie_id INT,
+    FOREIGN KEY (movie_id) REFERENCES movies(movie_id)
+);
+
+-- Sample insert into watchlist
+INSERT INTO watchlist (show_title, status)
+VALUES 
+('Striking Distance', 'Plan to Watch'),
+('Anaconda', 'Watching'),
+('Jumanji: Welcome to the Jungle', 'Completed');
+
+-- Update movie_id using join
+UPDATE watchlist w
+JOIN movies m ON m.title LIKE CONCAT('%', w.show_title, '%')
+SET w.movie_id = m.movie_id;
+
+-- Join query to view watchlist with movie details
+SELECT w.show_title, w.status, m.movie_id
+FROM watchlist w
+JOIN movies m ON w.movie_id = m.movie_id;
+
+-- Get latest trending rankings
+SELECT w.show_title, w.status, n.weekly_rank
+FROM watchlist w
+JOIN movies m ON w.movie_id = m.movie_id
+JOIN netflix_data n ON m.title = n.show_title
+WHERE n.week = (SELECT MAX(week) FROM netflix_data);
+
+-- Count shows by category
+SELECT category, COUNT(*) AS total
+FROM netflix_data
+GROUP BY category;
+
+-- Count appearances of shows
+SELECT show_title, COUNT(*) AS appearances
+FROM netflix_data
+GROUP BY show_title
+ORDER BY appearances DESC;
+
+-- Weekly trends
+SELECT week, COUNT(*) AS total_shows
+FROM netflix_data
+GROUP BY week
+ORDER BY week DESC;
