@@ -16,16 +16,16 @@ CineScope is a live movie and series analytics system that fetches real-time dat
 ## 📸 Project Screenshots
 
 ### 🎬 Movies Table
-![Movies](movies.png)
+![Movies](assets/movies.png)
 
 ### 📋 Watchlist Table
-![Watchlist](watchlist.png)
+![Watchlist](assets/watchlist.png)
 
 ### 🔗 Watchlist with Movie IDs (Join)
-![Join](join.png)
+![Join](assets/join.png)
 
 ### 📊 Data Analysis
-![Analytics](analytics.png)
+![Analytics](assets/analytics.png)
 
 
 ## 🛠️ Tech Stack
