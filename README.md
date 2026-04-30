@@ -75,7 +75,14 @@ Note: API key is stored securely using environment variables.
 
 ## ▶️ Sample Run Output
 
+```
+Movies inserted successfully!
+Already exists: Avatar
+Already exists: Jumanji
+```
 
+### 📊 Watchlist with Movie Mapping
+![Join](assets/join.png)
 ## 📊 Database Design
 - Movies table stores movie details  
 - Watchlist table stores user-tracked content  
