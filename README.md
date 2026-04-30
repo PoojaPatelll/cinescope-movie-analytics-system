@@ -40,9 +40,20 @@ CineScope is a live movie and series analytics system that fetches real-time dat
 
 ```
 cinescope/
-│── fetch_movies.py
+│── src/
+│ └── fetch_movies.py
+│
+│── sql/
+│ └── schema.sql
+│
+│── assets/
+│ ├── movies.png
+│ ├── watchlist.png
+│ ├── join.png
+│ ├── analytics.png
+│ └── er_diagram.png
+│
 │── requirements.txt
-│── schema.sql
 │── README.md
 ```
 
@@ -57,7 +68,16 @@ cinescope/
 ## 📊 Database Design
 - Movies table stores movie details  
 - Watchlist table stores user-tracked content  
-- Foreign key relationship ensures data consistency  
+- Foreign key relationship ensures data consistency
+
+## 🔄 Data Flow
+
+1. Python script fetches trending movies from TMDB API  
+2. Data is processed and duplicates are handled  
+3. Clean data is stored in MySQL database  
+4. Watchlist is linked using foreign keys  
+5. SQL queries generate insights  
+6. Task Scheduler automates daily execution  
 
 ## 🗺️ ER Diagram
 
