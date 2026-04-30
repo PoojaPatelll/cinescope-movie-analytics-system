@@ -1,9 +1,12 @@
 import requests
 import time
 import mysql.connector
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # 🔐 PUT YOUR REAL API KEY HERE
-import os
 API_KEY = os.getenv("TMDB_API_KEY")
 
 url = f"https://api.themoviedb.org/3/trending/movie/day?api_key={API_KEY}"
