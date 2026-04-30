@@ -14,7 +14,7 @@ This project was built to simulate a real-world data pipeline where movie data i
 - ⏰ Automated daily database updates using Task Scheduler  
 - 🗄️ MySQL database integration  
 - 🔗 Relational database design with foreign key constraints  
-- 📋 Watchlist feature to track movies and series  
+- 📋 Watchlist feature to track movies   
 - 🧠 SQL queries for data analysis (joins, aggregations, trends)  
 - ⚠️ Error handling and retry mechanism for API failures
 
