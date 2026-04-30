@@ -35,7 +35,7 @@ else:
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="pooja.4605",   # your MySQL password
+    password="your_password",   # your MySQL password
     database="cinescope_db"
 )
 
