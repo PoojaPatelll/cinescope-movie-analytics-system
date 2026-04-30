@@ -74,6 +74,10 @@ cinescope/
 
 Note: API key is stored securely using environment variables.
 
+## ⏰ Automation
+
+The script is scheduled using Windows Task Scheduler to run daily and keep the database updated automatically.
+
 ## ▶️ Sample Run Output
 
 ```
