@@ -1,0 +1,11 @@
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.env
+data/cinescope.db
+data/cinescope.db-wal
+data/cinescope.db-shm
+data/_uploaded_netflix.csv
+.streamlit/secrets.toml
